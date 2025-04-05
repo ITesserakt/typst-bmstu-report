@@ -5,4 +5,4 @@ entrypoint = "src/lib.typ"
 authors = ["ITesserakt <potryas85@mail.ru>"]
 license = "MIT"
 description = "Template for report using BMSTU conventions"
-compiler = 0.13.0
+compiler = "0.13.0"
