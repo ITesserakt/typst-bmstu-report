@@ -6,3 +6,4 @@ authors = ["ITesserakt <potryas85@mail.ru>"]
 license = "MIT"
 description = "Template for report using BMSTU conventions"
 compiler = "0.13.0"
+repository = "https://github.com/ITesserakt/typst-bmstu-report"
