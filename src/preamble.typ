@@ -32,6 +32,8 @@
   
   set figure(supplement: "Рисунок")
   set figure.caption(separator: [ -- ])
+  show figure.where(kind: table): set figure(supplement: "Таблица")
+  show figure.where(kind: table): set figure.caption(position: top)
   show figure: set block(breakable: true)
   
   [#doc]
