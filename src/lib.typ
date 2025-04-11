@@ -1,5 +1,4 @@
 #import "title.typ": mk_title_header, mk_title_location, mk_title_main, mk_title_properties, mk_title_authors
-#import "preamule.typ": conf
 
 #let template(
   title: "отчет по лабораторной работе",
@@ -20,6 +19,7 @@
   teacher_position: "Преподаватель",
   body
 ) = {
+  import "preamble.typ": conf
   show: conf
   
   set document(author: author, title: theme)
