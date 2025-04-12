@@ -7,10 +7,12 @@
   )
   
   set text(
-    font: "Liberation Serif",
+    font: "Times New Roman",
     size: 12pt,
     lang: "ru"
   )
+
+  show raw: set text(font: "Fira Code")
   
   set par(
     justify: true,
