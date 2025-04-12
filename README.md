@@ -6,7 +6,7 @@ This repository provides a [Typst](https://typst.app/home/) package for creating
 
 ## Installation
 
-Since this package is not yet included in the official [Typst package list](https://github.com/typst/packages), so using it requires some manual setup.
+Since this package is not yet included in the official [Typst package list](https://github.com/typst/packages), using it requires some manual setup.
 
 One way to do this is by placing the package in your local Typst package directory:
 ```sh
