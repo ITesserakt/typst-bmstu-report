@@ -32,6 +32,10 @@ In general, using the package involves importing it and overlaying a document wi
 = Your text goes here
 ```
 
+Title page of an `example.typ` looks like this:
+
+![Example title page](.github/example_1.png)
+
 ### Fonts
 
 To use the only true fonts™, you need to provide the path to the `fonts` folder for typst compiler.
