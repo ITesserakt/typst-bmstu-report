@@ -1,4 +1,6 @@
 #let conf(doc) = {
+  let par_indent = 1.25cm
+
   set page(
     paper: "a4", 
     margin: (left: 3cm, right: 1.5cm, top: 2cm, bottom: 2cm),
@@ -17,10 +19,15 @@
   set par(
     justify: true,
     linebreaks: "optimized",
-    first-line-indent: (amount: 1.25cm, all: true),
+    first-line-indent: (amount: par_indent, all: true),
     spacing: 0.75em,
     leading: 0.75em,
   )
+
+  set list(marker: [--], indent: par_indent)
+  set enum(indent: par_indent, numbering: "1)")
+  set math.equation(numbering: "(1)")
+  show figure.where(kind: raw): set figure(supplement: "Листинг")
   
   set heading(
     numbering: (..nums) => {
