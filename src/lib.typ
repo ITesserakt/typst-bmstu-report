@@ -17,6 +17,8 @@
   group: none,
   teacher: none,
   teacher_position: "Преподаватель",
+  include_title_page: true,
+  include_outline_page: true,
   body
 ) = {
   import "preamble.typ": conf
@@ -24,28 +26,32 @@
   
   set document(author: author, title: theme)
   
-  set page(numbering: none)
-  stack(
-    spacing: none,
+  if include_title_page {
+    set page(numbering: none)
+    stack(
+      spacing: none,
     
-    mk_title_header(),
-    v(1em),
-    mk_title_location(faculty, department),
+      mk_title_header(),
+      v(1em),
+      mk_title_location(faculty, department),
     
-    v(1fr),
-    mk_title_main(title, discipline),
-    v(1fr),
-    mk_title_properties(author_full, group, theme: theme, variant: variant),
-    v(1fr),
-    mk_title_authors(author, teacher, teacher_position),
-    v(2fr),
-    align(center, [#city, #year\г.])
-  )
-  
+      v(1fr),
+      mk_title_main(title, discipline),
+      v(1fr),
+      mk_title_properties(author_full, group, theme: theme, variant: variant),
+      v(1fr),
+      mk_title_authors(author, teacher, teacher_position),
+      v(2fr),
+      align(center, [#city, #year\г.])
+    )
+  }
+
   set page(numbering: "1")
-  pagebreak()
-  outline(depth: 3, indent: 0pt)
-  pagebreak()
+  if include_outline_page {
+    pagebreak()
+    outline(depth: 3, indent: 0pt)
+    pagebreak()
+  }
   
   body
 }
