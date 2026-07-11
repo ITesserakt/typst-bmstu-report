@@ -1,7 +1,13 @@
 #import "src/lib.typ": template, appendix
 
 #show: template.with(
-  author: "Example"
+  author: lorem(1),
+  author_full: lorem(3),
+  group: lorem(1),
+  variant: lorem(1),
+  discipline: lorem(4),
+  teacher: lorem(1),
+  theme: lorem(10),
 )
 
 = Заголовок 1
@@ -54,11 +60,14 @@
   )
 )
 
-```c
-int main() {
-  return 69;
-}
-```
+#figure(
+  caption: [Sample listing],
+  ```c
+  int main() {
+    return 69;
+  }
+  ```
+)
 
 #pagebreak()
 #appendix[

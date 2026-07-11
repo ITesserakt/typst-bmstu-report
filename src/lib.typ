@@ -28,28 +28,26 @@
   
   if include_title_page {
     set page(numbering: none)
-    stack(
-      spacing: none,
-    
-      mk_title_header(),
-      v(1em),
-      mk_title_location(faculty, department),
-    
-      v(1fr),
-      mk_title_main(title, discipline),
-      v(1fr),
-      mk_title_properties(author_full, group, theme: theme, variant: variant),
-      v(1fr),
-      mk_title_authors(author, teacher, teacher_position),
-      v(2fr),
-      align(center, [#city, #year\г.])
-    )
+    set par(spacing: 0.5em)
+
+    mk_title_header()
+    mk_title_location(faculty, department)
+
+    v(1fr)
+    mk_title_main(title, discipline)
+    v(1fr)
+    mk_title_properties(author_full, group, theme: theme, variant: variant)
+    v(1fr)
+    mk_title_authors(author, teacher, teacher_position)
+    v(2fr)
+    align(center, [#city, #year])
   }
 
   set page(numbering: "1")
   if include_outline_page {
+    show heading: set align(center)
     pagebreak()
-    outline(depth: 3, indent: 0pt)
+    outline(depth: 3, indent: 1.2cm, title: [СОДЕРЖАНИЕ])
     pagebreak()
   }
   
